@@ -9,3 +9,105 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+
+/* ----------- Анимация сердца -----------*/
+
+.like-icon {
+  width: 39px;
+  height: 36px;
+}
+
+/* Группа сердца без искр */
+.like-icon.is-liked .heart { 
+  transform-origin: center;
+  animation: scale-heart 0.3s ease-in 0.1s ;
+}
+
+/* Контур сердца */
+.contour { 
+  transition: fill 0.1s linear 0s;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear 0.06s;
+}
+
+/* Заливка сердца */
+.main-body {  
+  transition: fill 0.3s linear 0s;
+}
+
+.card__icon-button:hover .main-body {
+  fill: var(--accent-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.card__icon-button:active .main-body {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+/* Сердцевина сердца */
+.like-icon .core { 
+  transition: fill 0.3s linear 0.03s;
+}
+
+.card__icon-button:hover .core {
+  fill: var(--accent-color);
+  transition: fill 0.3s linear 0s;
+}
+
+.card__icon-button:active .core {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear 0s;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear 0s;
+}
+
+/* Искры сердца */
+.sparks { 
+  opacity: 0;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks-view 0.3s ease-in 0.3s;
+}
+
+/* ---------------------------------------- */
+
+@keyframes scale-heart {
+  0% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 1.25;
+  }
+
+  0% {
+    scale: 1;
+  }
+}
+
+@keyframes sparks-view {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 100;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

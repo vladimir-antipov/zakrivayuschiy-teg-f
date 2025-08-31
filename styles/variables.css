@@ -1,1 +1,31 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  /* Шрифты */
+  --main-font: 'Inter-Variable', sans-serif;
+  --accent-font: 'PressStart2P-Regular', monospace;
+
+  --main-text-weight: 410;
+  --main-header-weight: 715;
+
+  --font-size-header: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --font-size-description: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+
+  /* Размеры блоков */
+  --size-block: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+  --header-padding: clamp(7.625rem, 7.4489rem + 0.7512vw, 8.125rem);
+
+  /* Цвет */
+  --stroke-color: #fff; /* Обводка лейбла карточки */
+  --border-color: #000;
+
+  /* Переливания кнопок */
+  --btn-bg: #fff;
+  --btn-inverse: #000;
+  
+  /* Анимация сердца */
+  --main-contour: #000;
+  --contour-color: #FF0000;
+  --animation-fill-color: #FF0000;
+  --main-body: transparent;
+  --accent-color: #000;
+}

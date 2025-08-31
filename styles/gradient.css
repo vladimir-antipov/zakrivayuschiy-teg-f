@@ -1,0 +1,6 @@
+:root {
+  --background-gradient:
+    repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px), 
+    repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px), 
+    repeating-linear-gradient(#e7e7e7 0.01%, #1a1a1a 100%);
+}
