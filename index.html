@@ -529,7 +529,7 @@
       <!-- Кнопка сохранить на память -->
       <div class="save">
         <button
-          class="button__save"
+          class="button button__save"
           onclick="window['dialog-id'].showModal()"
           aria-controls="dialog-id"
         >
@@ -548,6 +548,7 @@
           <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
         </div>
         <button
+        type="button"
           class="button dialog__button-save"
           onclick="window['dialog-id'].close()"
         >
