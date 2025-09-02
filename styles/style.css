@@ -79,6 +79,7 @@
 }
 
 .button {
+  display: flex;
   justify-content: center;
   align-items: center;
   border: 2px solid var(--border-color);
@@ -97,15 +98,12 @@
 }
 
 .card__like-button {
-  display: flex;
   position: relative;
   inline-size: 130px;
   block-size: 38px;
 }
 
-.card__like-button::before, 
-.button__save::before, 
-.dialog__button-save::before {
+.button::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -116,12 +114,8 @@
   transform-origin: left center;
 }
 
-.card__like-button:hover::before,
-.card__like-button:focus-visible::before, 
-.button__save:hover::before, 
-.button__save:focus-visible::before,
-.dialog__button-save:hover:before, 
-.dialog__button-save:focus-visible::before {
+.button:hover::before,
+.button:focus-visible::before {
   transform: scaleX(1);
 }
 
@@ -209,7 +203,6 @@
 
 .button__save {
   position: relative;
-  display: flex;
   flex-direction: column;
   gap: 8px;
   padding: 16px 18px;
@@ -264,10 +257,7 @@
   text-transform: uppercase;
 }
 
-.dialog__button-text {
-  color: #fff;
-  mix-blend-mode: difference;
-}
+
 
 @media (width >= 376px) {
   .button__save {
